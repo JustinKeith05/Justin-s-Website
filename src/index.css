@@ -9,7 +9,7 @@ html, body {
 }
 
 @layer utilities {
-  @keyframes loading {
+  @keyframes blink {
     0%, 100% {
       opacity: 1;
 
@@ -20,7 +20,7 @@ html, body {
   }
 
   .animate-blink {
-    animation: blink 0.8s step-end infinte;
+    animation: blink 0.8s step-end infinite;
   }
 
 
@@ -34,7 +34,7 @@ html, body {
     }
   }
 
-  .animate-loadin-bar {
-    animation: loading 0.8s ease infinte;
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
   }
 }
