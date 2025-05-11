@@ -55,6 +55,14 @@ export const About = () => {
 
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4">Work Experience</h3>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <li>
+                                    <strong>Social Media Management Intern</strong> - Nominal (Jan 2021 - May 2021)
+                                </li>
+                                <li>
+                                    <strong>Assistant Instructir</strong> - Kumon (Aug 2018 - Present)
+                                </li>
+                        </ul>
                     </div>
                 </div>         
             </div>

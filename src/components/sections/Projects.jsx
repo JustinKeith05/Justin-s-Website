@@ -1,5 +1,26 @@
+import { ProjectCard } from "../ProjectCard";
 
 export const Projects = () => {
+    const projects = [
+        {
+            title: "Menu Optimization & Financial Projection Platform",
+            description: "Full-stack web application designed to help fod truck operators optimize menu pricing and forecast profts. ",
+            technologies: ["SolidJS", "Node", "AWS", "DrizzleORM", "SQLite3", "BetterAuth", "TailwindCSS", "TypeScript", "Bun"],
+            link: "#"
+        },
+        {
+            title: "Classi",
+            description: "Refactored and rebuilt a legacy class planner into a responsive class scheduling tool tailored to user needs.",
+            technologies: ["Java", "JavaSwing", "Gradle"],
+            link: "#"
+        },
+        {
+            title: "How Screen Time Affects Cognitive Functions",
+            description: "Conducted a research study on the impact of screen time on cognitive functions, utilizing Python for data analysis.",
+            technologies: ["Python", "Pandas", "NumPy", "Matplotlib"],
+            link: "https://github.com/JustinKeith05/ser494_23fc_project"
+        }
+    ];
     
     return(
         <section id="projects" className="min-h-screen flex items-center justify-center py-20">
@@ -7,27 +28,17 @@ export const Projects = () => {
                 <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">Featured Projects</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-                        <h3 className="text-xl font-bold mb-2">
-                            Project 1
-                        </h3>
-                        <p className="text-gray-400 mb-4">
-                            Project 1 Description
-                        </p>
-
-                        <div>
-                            {["React", "Node.js", "AWS"].map((tech, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:big-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="flex justify-between items-center">
-                            <a href="#" className="text-blue-400 hover:text-blue-300 trainsition-colors">View Project →</a>
-                        </div>
-                    </div>
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            technologies={project.technologies}
+                            link={project.link}
+                        />
+                        // Can alse use <ProjectCard key={index} {...project} />
+                    ))}
+                    
                 </div>
             </div>
         </section>
