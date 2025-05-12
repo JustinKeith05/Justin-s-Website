@@ -31,7 +31,7 @@ function App() {
         <Home></Home>   
         <About></About>
         <Projects></Projects>
-        <Contact></Contact>
+        {/* <Contact></Contact> */}
       </div>
     </div>
   )
