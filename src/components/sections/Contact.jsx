@@ -1,4 +1,5 @@
 import emailjs from 'emailjs-com';
+import React, { useState } from 'react';
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -10,7 +11,12 @@ export const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+        emailjs.sendForm(
+            import.meta.env.VITE_SERVICE_ID, 
+            import.meta.env.VITE_TEMPLATE_ID, 
+            e.target, 
+            import.meta.env.VITE_PUBLIC_KEY
+        )
         .then((result) => {
             alert("Message Sent");
             setFormData({
@@ -18,9 +24,8 @@ export const Contact = () => {
                 email: "",
                 message: "",
             })
-        }).catch(() => {
-            alert("Something Went Wrong Sending Your Message");
-        })
+        }).catch(() => 
+            alert("Something Went Wrong Sending Your Message"));
 
     }
 
@@ -31,21 +36,21 @@ export const Contact = () => {
                 <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">Get In Touch</h2>
                 <form action="" className="space-y-6" onSubmit={handleSubmit}>
                     <div className="relative">
-                        <input type="text" id="name" name="name" required value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        <input type="text" id="name" name="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value})}
                                 className="w-full bg-white-5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                                 placeholder="Name..." 
                         />
                     </div>
 
                     <div className="relative">
-                        <input type="email" id="email" name="email" required value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        <input type="email" id="email" name="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value})}
                                 className="w-full bg-white-5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                                 placeholder="example@gmail.com" 
                         />
                     </div>
 
                     <div className="relative">
-                        <textarea id="message" name="message" required value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} rows={5}
+                        <textarea id="message" name="message" required value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value})} rows={5}
                                 className="w-full bg-white-5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                                 placeholder="Your message here..." 
                         />
