@@ -4,7 +4,7 @@ export const Projects = () => {
     const projects = [
         {
             title: "Menu Optimization & Financial Projection Platform",
-            description: "Full-stack web application designed to help fod truck operators optimize menu pricing and forecast profts. ",
+            description: "Full-stack web application designed to help food truck operators optimize menu pricing and forecast profts. ",
             technologies: ["SolidJS", "Node", "AWS", "DrizzleORM", "SQLite3", "BetterAuth", "TailwindCSS", "TypeScript", "Bun"],
             link: "#"
         },
