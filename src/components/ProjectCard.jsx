@@ -24,7 +24,7 @@ export const ProjectCard = ({ title, description, technologies, link }) => {
             {/* Project Link */}
             <div className="flex justify-between items-center mt-auto">
                 <a href={link} className="text-blue-400 hover:text-blue-300 transition-colors mt-2">
-                    View Project →
+                    {link ? "View Project →" : ""}
                 </a>
             </div>
         </div>

@@ -6,13 +6,13 @@ export const Projects = () => {
             title: "Menu Optimization & Financial Projection Platform",
             description: "Full-stack web application designed to help food truck operators optimize menu pricing and forecast profts. ",
             technologies: ["SolidJS", "Node", "AWS", "DrizzleORM", "SQLite3", "BetterAuth", "TailwindCSS", "TypeScript", "Bun"],
-            link: "#"
+            link: ""
         },
         {
             title: "Classi",
             description: "Refactored and rebuilt a legacy class planner into a responsive class scheduling tool tailored to user needs.",
             technologies: ["Java", "JavaSwing", "Gradle"],
-            link: "#"
+            link: ""
         },
         {
             title: "How Screen Time Affects Cognitive Functions",
