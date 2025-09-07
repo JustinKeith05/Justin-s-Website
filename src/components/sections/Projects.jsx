@@ -19,6 +19,20 @@ export const Projects = () => {
             description: "Conducted a research study on the impact of screen time on cognitive functions, utilizing Python for data analysis.",
             technologies: ["Python", "Pandas", "NumPy", "Matplotlib"],
             link: "https://github.com/JustinKeith05/ser494_23fc_project"
+        },
+
+        {
+            title: "KokoAI",
+            description: "Created a discord chatbot that captures user messages from Discord, forwards them to the OpenAI API for processing, and returns AI-generated responses in real-time.",
+            technologies: ["Python", "Discord.py", "OpenAI API"],
+            link: "https://github.com/JustinKeith05/KokoAI-Discord-Chatbot"
+        },
+
+        {
+            title: "Student Tracker",
+            description: "Created a web app to help instructors efficiently manage their enrollments, and visualize and track key performance indicators (KPIs). ",
+            technologies: ["JavaScript", "Node.js", "React", "Supabase", "TailwindCSS", "ShadCN/UI", "Vite"],
+            link: ""
         }
     ];
     
