@@ -1,5 +1,6 @@
 import emailjs from 'emailjs-com';
 import React, { useState } from 'react';
+import { Icon } from '@iconify/react';
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -58,7 +59,18 @@ export const Contact = () => {
 
                     <button type="submit" className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]">Send Message</button>
                 </form>
+
+                <div className="flex justify-center mt-8 gap-6 text-gray-400">
+                    <a href="https://github.com/JustinKeith05" >
+                        <Icon icon="line-md:linkedin" className="text-3xl hover:-translate-y-0.5 hover:text-blue-400"/>
+                    </a>
+                    <a href="https://github.com/JustinKeith05">
+                        <Icon icon="line-md:github-loop" className="text-3xl hover:-translate-y-0.5 hover:text-blue-400"/>
+                    </a>
+                    
+                </div>
             </div>
+
 
         </section>
     );
