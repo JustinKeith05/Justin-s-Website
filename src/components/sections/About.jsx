@@ -86,7 +86,7 @@ export const About = () => {
                                     <strong>Assistant Instructor</strong> - Kumon (Aug 2018 - Present)
                                 </li>
                                 <li>
-                                    <strong>Student Software Engineer</strong> - Food Trucks Association of Canada (Aug 2024 - May 2025)
+                                    <strong>Software Engineer</strong> - Food Trucks Association of Canada (Aug 2024 - May 2025)
                                 </li>
                         </ul>
                     </div>
